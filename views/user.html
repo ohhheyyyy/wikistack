@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+ <hr/>
+  <h3><a href="PLACEHOLDER-AUTHOR-URL">{{ user.name }}</a></h3>
+  <!-- <div>PLACEHOLDER TAG LIST</div> -->
+  <hr/>
+    <h4>Articles:</h4>
+  <ul>
+  {% for page in pages %}
+    <li><a href="/wiki/{{ page.urlTitle }}">{{ page.title }}</a></li>
+ {% endfor %}
+</ul>
+{% endblock %}
